@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from 'react';
-import { ButtonStyle } from './button.style';
+import * as S from './button.style';
 
 export interface ButtonStyleProps {
   defaultColor: string;
@@ -17,8 +17,8 @@ export interface ButtonProps {
 
 export const Button = (props: ButtonProps) => {
   return (
-    <ButtonStyle style={props.style} onClick={props.onClick}>
+    <S.Button style={props.style} onClick={props.onClick}>
       {props.children}
-    </ButtonStyle>
+    </S.Button>
   );
 };
