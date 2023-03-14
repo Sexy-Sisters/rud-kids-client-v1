@@ -15,10 +15,12 @@ export interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button = (props: ButtonProps) => {
+const Button = (props: ButtonProps) => {
   return (
     <S.Button style={props.style} onClick={props.onClick}>
       {props.children}
     </S.Button>
   );
 };
+
+export default Button;
